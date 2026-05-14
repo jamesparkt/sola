@@ -1,396 +1,182 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SOLA 솔라원어민영어 | 영어 유치원 없이도, 원어민처럼</title>
-  <meta name="description" content="미국 교육학 석사 원어민 원장님 직강. 영어 유치원 없이도 동등한 효과. 인천 중구 솔라원어민영어학원.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>솔라원어민영어 | 영종 미국 사립학교 컨셉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* 컬러 가이드 반영 */
+            --pure-white: #FFFFFF;
+            --sol-light-gray: #F7F7F7;
+            --sol-silver: #E0E0E0;
+            --sol-dark-gray: #333333;
+            --sol-mid-gray: #666666;
+            --sol-magenta: #A61F54; 
+            --sol-mint: #E0F2F1;   
+        }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: var(--pure-white); color: var(--sol-dark-gray); line-height: 1.7; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* 헤더 로고 (원본 컬러) */
+        header { width: 100%; height: 90px; background: var(--pure-white); border-bottom: 1px solid var(--sol-silver); display: flex; justify-content: center; align-items: center; position: sticky; top: 0; z-index: 1000; padding: 10px 0; }
+        .header-logo { height: 100%; max-height: 60px; width: auto; object-fit: contain; }
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        section { padding: 100px 20px; max-width: 1100px; margin: 0 auto; }
+        .section-title { font-size: 2.4rem; font-weight: 700; text-align: center; margin-bottom: 60px; }
+        .magenta-point { color: var(--sol-magenta); }
 
-    :root {
-      --crimson:      #8b1a1a;
-      --crimson-dark: #6b1212;
-      --crimson-mid:  #a01e1e;
-      --navy:         #0a0f1d; /* 로고를 돋보이게 할 딥 네이비 */
-      --navy-mid:     #1e2d52;
-      --white:        #ffffff;
-      --off-white:    #f8f7f4;
-      --cream:        #f2ede4;
-      --cream-dark:   #e6dfd3;
-      --amber:        #d97706;
-      --amber-light:  #fbbf24;
-      --slate:        #64748b;
-      --text:         #1e293b;
-      --shadow:       0 2px 20px rgba(0,0,0,0.1);
-    }
+        /* Hero */
+        .hero { background-color: var(--pure-white); height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero h1 { font-size: 3.2rem; margin-bottom: 24px; font-weight: 700; word-break: keep-all; }
+        .hero p { font-size: 1.6rem; color: var(--sol-mid-gray); font-weight: 300; }
 
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', 'Noto Sans KR', sans-serif;
-      color: var(--text); background: var(--white);
-      line-height: 1.7; font-size: 15px;
-      -webkit-font-smoothing: antialiased;
-    }
+        /* Core Values */
+        .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 80px; }
+        .feature-card { background: var(--sol-light-gray); padding: 50px 30px; text-align: center; border-radius: 15px; border: 1px solid transparent; }
+        .feature-card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--sol-magenta); }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+        /* Philosophy (Mint Point) */
+        .philosophy { text-align: center; padding: 80px 40px; background-color: var(--sol-mint); border-radius: 30px; margin-bottom: 100px; }
+        .highlight { font-weight: 700; border-bottom: 3px solid var(--sol-magenta); }
 
-    .section-label {
-      display: inline-block;
-      font-size: 10px; font-weight: 700;
-      letter-spacing: 3.5px; text-transform: uppercase;
-      color: var(--crimson); margin-bottom: 10px;
-    }
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(28px, 4vw, 42px); font-weight: 700;
-      color: #182340; line-height: 1.2; margin-bottom: 14px;
-    }
-    .rule { width: 40px; height: 2px; background: var(--crimson); opacity: 0.35; margin: 16px 0 32px; }
-    .rule.center { margin-left: auto; margin-right: auto; }
-    .rule.light  { background: rgba(255,255,255,0.3); opacity: 1; }
+        /* News & Story Placeholders */
+        .placeholder-box { width: 100%; min-height: 400px; background: var(--sol-light-gray); border: 1px solid var(--sol-silver); display: flex; justify-content: center; align-items: center; border-radius: 15px; color: var(--sol-mid-gray); }
 
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
+        /* Dark Footer (Admission + Location) */
+        footer { background-color: var(--sol-dark-gray); color: var(--pure-white); padding: 100px 20px 40px 20px; }
+        .footer-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; }
+        
+        /* 푸터 로고: 필터 제거 후 화이트 전환 적용 */
+        .footer-logo { 
+            height: 55px; 
+            margin-bottom: 35px; 
+            object-fit: contain; 
+            filter: brightness(0) invert(1); /* 이미지를 순수 화이트로 변경하는 설정 */
+        }
+        
+        .footer-left h2, .footer-right h2 { font-size: 1.6rem; margin-bottom: 25px; color: var(--sol-mint); letter-spacing: 1px; }
+        .location-info { font-size: 1rem; color: var(--sol-silver); line-height: 2; }
+        .map-area { width: 100%; height: 280px; background: #444; border-radius: 10px; margin-top: 25px; display: flex; justify-content: center; align-items: center; color: #888; }
 
-    /* ── Navigation (수정됨: 로고 화이트 강조) ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      background: var(--navy); /* 붉은 기를 완전히 제거 */
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 4px 25px rgba(0,0,0,0.25);
-    }
-    .nav-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 72px; max-width: 1100px; margin: 0 auto; padding: 0 32px;
-    }
-    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-logo-img { height: 36px; width: auto; object-fit: contain; }
-    .nav-logo-fallback { display: none; align-items: center; gap: 10px; }
-    .nav-logo-mark {
-      width: 36px; height: 36px; border-radius: 6px;
-      border: 1.5px solid var(--white); /* 순백색 보더 */
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 18px; font-weight: 700; color: var(--white);
-    }
-    .nav-logo-text { display: flex; flex-direction: column; }
-    .nav-logo-en { font-size: 14px; font-weight: 700; color: var(--white); letter-spacing: 0.5px; }
-    .nav-logo-kr { font-size: 10px; color: rgba(255,255,255,0.8); margin-top: 1px; }
+        /* Dark Form */
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 0.85rem; color: var(--sol-silver); }
+        .form-group input, .form-group textarea { width: 100%; padding: 14px; background: #444; border: 1px solid #555; border-radius: 8px; color: white; font-family: inherit; }
+        .form-group input::placeholder { color: #888; }
+        .form-group input:focus { outline: none; border-color: var(--sol-magenta); }
+        
+        .submit-btn { width: 100%; padding: 18px; background: var(--sol-magenta); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background: #8a1945; transform: translateY(-2px); }
 
-    .nav-links { display: flex; gap: 30px; list-style: none; }
-    .nav-links a {
-      text-decoration: none; font-size: 12px; font-weight: 500;
-      letter-spacing: 0.8px; color: rgba(255,255,255,0.8);
-      transition: color 0.2s; text-transform: uppercase;
-    }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta {
-      background: var(--white) !important;
-      color: var(--navy) !important;
-      padding: 8px 18px; border-radius: 4px; font-weight: 700 !important;
-      transition: all 0.2s !important;
-    }
-    .nav-cta:hover { background: var(--cream) !important; transform: translateY(-1px); }
+        .copyright { text-align: center; margin-top: 80px; padding-top: 30px; border-top: 1px solid #444; font-size: 0.85rem; color: var(--sol-mid-gray); }
 
-    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--white); border-radius: 2px; }
+        /* Floating CTA */
+        .floating-btn { position: fixed; bottom: 30px; right: 30px; background: var(--sol-magenta); color: white; padding: 18px 28px; border-radius: 50px; font-weight: 700; box-shadow: 0 5px 20px rgba(166, 31, 84, 0.4); z-index: 1000; }
 
-    /* ── Hero ── */
-    .hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 110px 32px 80px;
-      position: relative; overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: -28px;
-      background-size: cover; background-position: center;
-      filter: blur(8px); z-index: 0;
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(130deg, rgba(10, 15, 29, 0.9) 0%, rgba(30, 15, 55, 0.8) 50%, rgba(15, 30, 60, 0.85) 100%);
-      z-index: 1;
-    }
-    .hero-inner {
-      max-width: 1100px; margin: 0 auto; width: 100%;
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px;
-      align-items: center; position: relative; z-index: 3;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 100px; padding: 6px 18px;
-      font-size: 10px; font-weight: 600; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--white); margin-bottom: 24px;
-    }
-    .hero-badge-dot { width: 6px; height: 6px; background: #ef4444; border-radius: 50%; }
-
-    .hero-headline { font-family: 'Cormorant Garamond', serif; line-height: 1.05; margin-bottom: 28px; }
-    .hero-headline-line1 { display: block; font-size: clamp(44px, 6.5vw, 76px); font-weight: 600; color: var(--white); letter-spacing: -1px; }
-    .hero-headline-line2 {
-      display: block; font-size: clamp(50px, 7.5vw, 88px); font-weight: 700; font-style: italic;
-      background: linear-gradient(100deg, #f87171 0%, #fbbf24 55%, #f9a8d4 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-
-    .hero-sub { font-size: 16px; color: rgba(255,255,255,0.8); line-height: 1.85; margin-bottom: 36px; max-width: 460px; }
-    .hero-compare-bar {
-      display: flex; align-items: center; gap: 10px; padding: 11px 18px;
-      background: rgba(251,191,36,0.1); border-left: 3px solid var(--amber-light);
-      border-radius: 0 6px 6px 0; margin-bottom: 36px; max-width: 460px;
-    }
-    .hero-compare-bar span { font-size: 13px; color: var(--amber-light); font-weight: 500; }
-
-    .btn-crimson {
-      display: inline-block; background: var(--crimson); color: var(--white);
-      padding: 14px 30px; border-radius: 5px; font-weight: 700; text-decoration: none;
-      transition: all 0.2s; box-shadow: 0 4px 20px rgba(139,26,26,0.4);
-    }
-    .btn-white {
-      display: inline-block; background: var(--white); color: var(--crimson);
-      padding: 14px 30px; border-radius: 5px; font-weight: 700; text-decoration: none;
-      transition: all 0.2s;
-    }
-
-    /* ── Stats ── */
-    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-    .hero-stat { padding: 18px; text-align: center; background: rgba(255,255,255,0.05); backdrop-filter: blur(4px); }
-    .hero-stat-num { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 700; color: var(--white); }
-    .hero-stat-label { font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 5px; text-transform: uppercase; }
-
-    /* ── Eunice Card ── */
-    .eunice-card {
-      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 16px; padding: 32px; backdrop-filter: blur(10px);
-    }
-    .eunice-card-header { display: flex; align-items: center; gap: 16px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 22px; }
-    .eunice-avatar { width: 60px; height: 60px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.25); overflow: hidden; background: #333; }
-    .eunice-avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .eunice-card-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--white); }
-    .eunice-verified { background: rgba(139,26,26,0.4); border: 1px solid rgba(239,68,68,0.4); padding: 5px 10px; border-radius: 100px; font-size: 10px; color: #fca5a5; font-weight: 700; }
-    .eunice-creds { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-    .eunice-cred { display: flex; align-items: flex-start; gap: 12px; padding: 13px; border-radius: 9px; }
-    .eunice-cred.cr-red { background: rgba(239,68,68,0.1); }
-    .eunice-cred.cr-amber { background: rgba(251,191,36,0.08); }
-    .eunice-cred.cr-teal { background: rgba(20,184,166,0.08); }
-    .eunice-cred.cr-purple { background: rgba(167,139,250,0.08); }
-    .eunice-cred-title { font-size: 13px; font-weight: 600; color: var(--white); }
-    .eunice-cred-sub { font-size: 11px; color: rgba(255,255,255,0.4); }
-    .press-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); padding: 7px 12px; border-radius: 100px; font-size: 11px; color: rgba(255,255,255,0.6); text-decoration: none; margin-right: 5px; margin-bottom: 5px; }
-
-    /* ── Features ── */
-    .features { background: var(--off-white); padding: 96px 32px; }
-    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .feature-card { background: var(--white); border-radius: 12px; padding: 40px 28px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .feature-icon-wrap { width: 68px; height: 68px; border-radius: 50%; margin: 0 auto 22px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
-    .feature-tag { display: inline-block; margin-top: 16px; background: #fff1f1; padding: 4px 12px; border-radius: 100px; font-size: 11px; color: var(--crimson); font-weight: 600; }
-
-    /* ── Teacher ── */
-    .teacher { background: #182340; padding: 96px 32px; position: relative; color: var(--white); overflow: hidden; }
-    .teacher-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.5fr; gap: 72px; }
-    .teacher-photo-frame { aspect-ratio: 3/4; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
-    .teacher-photo-frame img { width: 100%; height: 100%; object-fit: cover; }
-    .credential { display: flex; gap: 14px; padding: 13px; background: rgba(255,255,255,0.04); border-radius: 7px; margin-bottom: 8px; }
-    .press-link { display: flex; align-items: center; gap: 10px; padding: 11px; background: rgba(255,255,255,0.04); text-decoration: none; color: rgba(255,255,255,0.6); font-size: 12px; margin-bottom: 5px; border-radius: 6px; }
-
-    /* ── News ── */
-    .news { background: var(--cream); padding: 96px 32px; }
-    .notion-placeholder { min-height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; background: var(--white); border-radius: 12px; }
-
-    /* ── Contact ── */
-    .contact { background: var(--navy); padding: 96px 32px; color: var(--white); }
-    .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-    .map-wrap { border-radius: 10px; overflow: hidden; height: 320px; }
-
-    /* ── Footer ── */
-    footer { background: #050810; padding: 44px 32px; text-align: center; color: rgba(255,255,255,0.4); }
-    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--white); margin-bottom: 8px; }
-
-    @media (max-width: 768px) {
-      .hero-inner, .teacher-inner, .contact-inner { grid-template-columns: 1fr; }
-      .features-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .nav-toggle { display: flex; }
-      .eunice-card { display: none; }
-    }
-  </style>
+        @media (max-width: 900px) {
+            .footer-content { grid-template-columns: 1fr; gap: 60px; }
+            .hero h1 { font-size: 2.4rem; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a href="#top" class="nav-logo">
-      <img src="logo.png" alt="SOLA 솔라원어민영어" class="nav-logo-img"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-      <div class="nav-logo-fallback">
-        <div class="nav-logo-mark">S</div>
-        <div class="nav-logo-text">
-          <span class="nav-logo-en">SOLA English</span>
-          <span class="nav-logo-kr">솔라원어민영어학원</span>
+    <header>
+        <!-- 원본 로고 -->
+        <img src="sola logo.png" alt="솔라 원어민 영어" class="header-logo">
+    </header>
+
+    <div class="hero">
+        <h1>영어 유치원에 다니지 않아도 <span class="magenta-point">원어민처럼</span></h1>
+        <p>영종에서 경험하는 미국 사립학교, 솔라원어민영어!</p>
+    </div>
+
+    <section>
+        <h2 class="section-title">SOLA <span class="magenta-point">3-100%</span> SYSTEM</h2>
+        <div class="features">
+            <div class="feature-card"><h3>100% 원어민 수업</h3><p>검증된 강사진의 본토 언어 감각</p></div>
+            <div class="feature-card"><h3>100% 영어 수업</h3><p>자연스러운 체득을 돕는 몰입 환경</p></div>
+            <div class="feature-card"><h3>100% 미국 교과서</h3><p>현지 사립학교 정통 커리큘럼</p></div>
         </div>
-      </div>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#features">학원소개</a></li>
-      <li><a href="#teacher">원장소개</a></li>
-      <li><a href="#news">학원소식</a></li>
-      <li><a href="#instagram">인스타그램</a></li>
-      <li><a href="#contact" class="nav-cta">상담예약</a></li>
-    </ul>
-    <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
-      <span></span><span></span><span></span>
-    </div>
-  </div>
-</nav>
 
-<section class="hero" id="top">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-    <div class="hero-left">
-      <div class="hero-badge"><span class="hero-badge-dot"></span> Incheon ○ 100% Native Speaker</div>
-      <h1 class="hero-headline">
-        <span class="hero-headline-line1">영어 유치원 없이도,</span>
-        <span class="hero-headline-line2">원어민처럼.</span>
-      </h1>
-      <p class="hero-sub">
-        미국 교육학 석사, TESOL 자격증의<br>
-        <strong>원어민 원장님이 직접</strong> 가르치는 영어.<br>
-        비싼 영어 유치원 없이도, 그 이상의 효과를 경험하세요.
-      </p>
-      <div class="hero-compare-bar"><span>영어 유치원 월 100만원+ → 솔라에서 동등한 효과, 합리적인 비용</span></div>
-      <div class="hero-actions">
-        <a href="https://forms.gle/jW3jv8T4gkGh4Ua58" target="_blank" class="btn-white">온라인 상담 예약</a>
-        <a href="#features" class="btn-crimson">학원 소개 보기</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">원어민 직강</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">영어 수업 진행</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">≥ 동등</div><div class="hero-stat-label">영유 대비 효과</div></div>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="eunice-card reveal">
-        <div class="eunice-card-header">
-          <div class="eunice-avatar"><img src="teacher-eunice.jpg" onerror="this.src='https://framerusercontent.com/images/d5sJ5l24sEPDTlZ54oXilzjfM.jpg'" /></div>
-          <div><div class="eunice-card-name">Teacher Eunice</div><div class="eunice-verified">원어민 원장</div></div>
+        <div class="philosophy">
+            <h2 style="font-size: 1.8rem; margin-bottom: 25px;">통합적 영어 교육 (Integrated Learning)</h2>
+            <p>
+                솔라는 영역을 나누어 학습하지 않습니다. <br><br>
+                미국 현지와 동일한 <span class="highlight">통합적 교육 방식</span>을 통해 
+                아이들이 영어를 지식으로 암기하는 것이 아니라 <span class="highlight">언어로 체득</span>하게 합니다. 
+            </p>
         </div>
-        <div class="eunice-creds">
-          <div class="eunice-cred cr-red"><div><div class="eunice-cred-title">Gateway Seminary 교육학 석사</div><div class="eunice-cred-sub">Master of Arts in Education (미국)</div></div></div>
-          <div class="eunice-cred cr-amber"><div><div class="eunice-cred-title">TESOL 자격증 (어린이·성인)</div><div class="eunice-cred-sub">영어 교수법 국제 공인 자격</div></div></div>
-          <div class="eunice-cred cr-teal"><div><div class="eunice-cred-title">전 미국 워싱턴 가정상담소 소장</div><div class="eunice-cred-sub">Former Director, Washington KC Center</div></div></div>
+    </section>
+
+    <section id="news">
+        <h2 class="section-title">솔라 <span class="magenta-point">최신 소식</span></h2>
+        <div class="placeholder-box">노션(Notion) 데이터 연동 영역</div>
+    </section>
+
+    <section id="story">
+        <h2 class="section-title">솔라 <span class="magenta-point">스토리</span></h2>
+        <div class="placeholder-box">인스타그램 피드 연동 영역</div>
+    </section>
+
+    <!-- 다크 푸터: 화이트 로고 및 통합 섹션 -->
+    <footer>
+        <div class="footer-content">
+            <!-- 왼쪽: 화이트 로고 및 위치 -->
+            <div class="footer-left">
+                <!-- CSS 필터로 화이트 처리된 로고[cite: 1] -->
+                <img src="sola logo.png" alt="SOLA White Logo" class="footer-logo">
+                <h2>LOCATION</h2>
+                <div class="location-info">
+                    <p>인천광역시 중구 넙디로 56 금강빌딩 3층</p>
+                    <p>(운서초등학교 인근)</p>
+                    <p style="margin-top: 15px; font-weight: 700; color: white;">상담문의: 032-747-2262</p>
+                </div>
+                <div class="map-area">
+                    카카오/네이버 지도 API 연동 영역
+                </div>
+            </div>
+
+            <!-- 오른쪽: 상담 신청 폼 -->
+            <div class="footer-right">
+                <h2>ADMISSION</h2>
+                <form action="https://formspree.io/f/your-id" method="POST">
+                    <div class="form-group">
+                        <label>학생 이름 (영어 이름 가능)</label>
+                        <input type="text" name="학생이름" placeholder="이름을 입력해 주세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label>보호자 연락처</label>
+                        <input type="tel" name="연락처" placeholder="010-0000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>학년</label>
+                        <input type="text" name="학년" placeholder="예: 초등 2학년" required>
+                    </div>
+                    <div class="form-group">
+                        <label>희망 등교일</label>
+                        <input type="date" name="희망등교일">
+                    </div>
+                    <div class="form-group">
+                        <label>기타 문의 사항</label>
+                        <textarea name="문의사항" rows="3" placeholder="궁금하신 내용을 남겨주세요"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">상담 신청하기</button>
+                </form>
+            </div>
         </div>
-        <a href="http://www.koreatimes.com/article/20231112/1489051" target="_blank" class="press-badge">한국일보 보도 1</a>
-        <a href="http://www.koreatimes.com/article/20231025/1486633" target="_blank" class="press-badge">한국일보 보도 2</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="features" id="features">
-  <div class="container">
-    <div class="features-header reveal">
-      <span class="section-label">Why SOLA</span>
-      <h2 class="section-title">솔라원어민영어만의 특별한 이유</h2>
-      <div class="rule center"></div>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card reveal">
-        <div class="feature-icon-wrap fi-red">🇺🇸</div>
-        <h3 class="feature-title">100% 원어민 직강</h3>
-        <p class="feature-desc">미국 교육학 석사의 원어민 원장님이 직접 모든 수업을 진행합니다.</p>
-        <span class="feature-tag">교육학 석사 원장 직강</span>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon-wrap fi-amber">📖</div>
-        <h3 class="feature-title">100% 영어 수업</h3>
-        <p class="feature-desc">미국 교과서를 기반으로 수업 전 과정이 영어로만 진행됩니다.</p>
-        <span class="feature-tag">미국 교과서 기반</span>
-      </div>
-      <div class="feature-card reveal">
-        <div class="feature-icon-wrap fi-teal">🏆</div>
-        <h3 class="feature-title">영유 이상의 효과</h3>
-        <p class="feature-desc">월 100만원 이상의 비용 없이도 체계적인 커리큘럼을 경험하세요.</p>
-        <span class="feature-tag">합리적 비용 · 최고 효과</span>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="copyright">
+            <p>&copy; 2024 SOLA Native English Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-<section class="teacher" id="teacher">
-  <div class="teacher-inner container">
-    <div class="teacher-photo-wrap reveal">
-      <div class="teacher-photo-frame"><img src="teacher-eunice.jpg" onerror="this.src='https://framerusercontent.com/images/d5sJ5l24sEPDTlZ54oXilzjfM.jpg'" /></div>
-    </div>
-    <div class="teacher-content reveal">
-      <span class="section-label">About the Principal</span>
-      <h2 class="teacher-name">Teacher Eunice</h2>
-      <p class="teacher-bio">미국 교육학 전공 및 워싱턴 가정상담소 소장 역임. 아이들의 마음을 깊이 이해하는 영어 교육 전문가입니다.</p>
-      <div class="credentials">
-        <div class="credential">Gateway Seminary 교육학 석사 (Master of Arts in Education)</div>
-        <div class="credential">TESOL 자격증 (어린이 · 성인)</div>
-        <div class="credential">전 미국 워싱턴 가정상담소 소장</div>
-        <div class="credential">전 E3원어민어학원 공동대표 · Team GENESIS 설립 및 대표</div>
-        <div class="credential">자매결연: San Jose Christian · Eastern Christian School</div>
-      </div>
-      <div class="teacher-press">
-        <a href="http://www.koreatimes.com/article/20231112/1489051" target="_blank" class="press-link">↗ 워싱턴가정상담소 세미나 강의 — 한국일보</a>
-        <a href="http://www.koreatimes.com/article/20231025/1486633" target="_blank" class="press-link">↗ 재미한국학교협의회 세미나 강사 — 한국일보</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="news" id="news">
-  <div class="container">
-    <div class="news-header reveal"><span class="section-label">Latest Updates</span><h2 class="section-title">학원 소식</h2></div>
-    <div class="notion-placeholder">
-      <h3>학원 소식</h3>
-      <p>원장님이 노션에 글을 쓰면 이 화면에 자동 반영됩니다.</p>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="container contact-inner">
-    <div class="reveal">
-      <span class="section-label">Location</span>
-      <h2 class="section-title">위치 안내</h2>
-      <p>인천시 중구 넙디로 56 금강빌딩 3층 (운서초 인근)</p>
-      <p>교육 문의: 032) 747-2262</p>
-      <a href="https://forms.gle/jW3jv8T4gkGh4Ua58" target="_blank" class="btn-crimson" style="margin-top:20px;">온라인 상담 예약</a>
-    </div>
-    <div class="map-wrap reveal">
-      <iframe src="about:blank" style="width:100%;height:100%;border:none;background:#eee;"></iframe>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-logo">SOLA English Academy</div>
-  <div class="footer-copy">© 2024 SOLA 솔라원어민영어학원 ○ 인천시 중구 넙디로 56 금강빌딩 3층 ○ 032-747-2262</div>
-</footer>
-
-<script>
-const heroImages = ['https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=1920&q=80'];
-document.getElementById('heroBg').style.backgroundImage = `url('${heroImages[0]}')`;
-
-function toggleNav() { document.getElementById('navLinks').classList.toggle('open'); }
-
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-</script>
+    <a href="tel:0327472262" class="floating-btn">📞 전화 상담하기</a>
 
 </body>
 </html>
