@@ -1,0 +1,14 @@
+# 프린터 상태 조회 — ipptool ipp://프린터IP/ipp/print get-printer.test
+{
+  NAME "Get-Printer-Attributes"
+  OPERATION Get-Printer-Attributes
+  GROUP operation-attributes-tag
+  ATTR charset attributes-charset utf-8
+  ATTR naturalLanguage attributes-natural-language en
+  ATTR uri printer-uri $uri
+  ATTR keyword requested-attributes printer-state,printer-state-reasons,printer-state-message
+  STATUS successful-ok
+  DISPLAY printer-state
+  DISPLAY printer-state-reasons
+  DISPLAY printer-state-message
+}

@@ -1,0 +1,17 @@
+# 작업 상태 조회 — ipptool -d job_id=N ipp://localhost/printers/큐이름 get-job.test
+{
+  NAME "Get-Job-Attributes"
+  OPERATION Get-Job-Attributes
+  GROUP operation-attributes-tag
+  ATTR charset attributes-charset utf-8
+  ATTR naturalLanguage attributes-natural-language en
+  ATTR uri printer-uri $uri
+  ATTR integer job-id $job_id
+  ATTR name requesting-user-name $user
+  ATTR keyword requested-attributes job-state,job-state-reasons,job-printer-state-message,job-impressions-completed
+  STATUS successful-ok
+  DISPLAY job-state
+  DISPLAY job-state-reasons
+  DISPLAY job-printer-state-message
+  DISPLAY job-impressions-completed
+}
