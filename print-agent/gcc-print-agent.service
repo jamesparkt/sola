@@ -1,0 +1,18 @@
+[Unit]
+Description=GCC print-agent (Notion 프린트 큐 → Brother DCP-T720DW)
+Wants=network-online.target
+After=network-online.target cups.service
+
+[Service]
+Type=simple
+User=gcc-print
+Group=gcc-print
+Environment=GCC_PRINT_CONFIG=/etc/gcc-print-agent/config.json
+ExecStart=/usr/bin/env node /opt/gcc-print-agent/agent.js
+Restart=always
+RestartSec=10
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

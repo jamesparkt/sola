@@ -1,0 +1,19 @@
+{
+  "notionToken": "여기에 노션 통합 토큰 (ntn_...)",
+  "dataSourceId": "7e534194-ff5f-41d8-a1ff-65e7db75dd05",
+
+  "slackBotToken": "여기에 슬랙 봇 토큰 (xoxb-...)",
+  "slackChannel": "C0BQG1PAVF0",
+  "slackWebhookUrl": "",
+
+  "driveProxyUrl": "여기에 GAS 'GCC 프린트 파일 프록시' 웹앱 주소 (https://script.google.com/macros/s/.../exec)",
+  "driveProxyKey": "여기에 GAS 스크립트 속성 PROXY_KEY 값",
+
+  "cupsQueue": "GCC_Brother",
+  "printerUri": "ipp://192.168.45.176/ipp/print",
+  "media": "iso_a4_210x297mm",
+  "scaling": "fit",
+  "pollSeconds": 15,
+  "statusSeconds": 5,
+  "jobTimeoutMinutes": 30
+}
