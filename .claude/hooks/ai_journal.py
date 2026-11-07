@@ -103,7 +103,8 @@ def on_session_start(data):
 
 def on_prompt(data):
     text = (data.get("prompt") or "").strip()
-    if not text:
+    # 목사님 글이 아닌 시스템 알림(PR 알림, 예약 작업 등)은 지시로 모으지 않는다
+    if not text or text.startswith("<") or text.startswith("[SYSTEM"):
         return
     sid = data.get("session_id")
     st = load(state_path(sid), {"last_logged": 0, "pending": []})
